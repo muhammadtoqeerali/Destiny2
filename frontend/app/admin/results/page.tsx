@@ -122,8 +122,8 @@ function ConfusionMatrix({ labels, matrix }: { labels: string[]; matrix: number[
 }
 
 function ScenarioExplorer() {
-  const [scenarioA, setScenarioA] = useState(BASE_PATIENT);
-  const [scenarioB, setScenarioB] = useState({ ...BASE_PATIENT, age: 84, lives_alone: 1, falls_last_year: 2, gait_speed_ms: 0.5, grip_strength_kg: 14, comorbidity_count: 4, fried_frailty_status_baseline: "Frail" as const });
+  const [scenarioA, setScenarioA] = useState<Scenario>(BASE_PATIENT);
+  const [scenarioB, setScenarioB] = useState<Scenario>({ ...BASE_PATIENT, age: 84, lives_alone: 1, falls_last_year: 2, gait_speed_ms: 0.5, grip_strength_kg: 14, comorbidity_count: 4, fried_frailty_status_baseline: "Frail" as const });
   const [resultA, setResultA] = useState<PredictionResult | null>(null);
   const [resultB, setResultB] = useState<PredictionResult | null>(null);
   const [loading, setLoading] = useState(false);
@@ -174,7 +174,15 @@ function ScenarioExplorer() {
   );
 }
 
-type Scenario = typeof BASE_PATIENT;
+type Scenario = Omit<
+  typeof BASE_PATIENT,
+  "fried_frailty_status_baseline"
+> & {
+  fried_frailty_status_baseline:
+    | "Robust"
+    | "Pre-frail"
+    | "Frail";
+};
 
 function ScenarioCard({
   title, accent, scenario, setScenario, result,
