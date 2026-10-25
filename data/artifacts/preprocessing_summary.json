@@ -1,0 +1,798 @@
+{
+  "target": "future_frailty_risk",
+  "before": {
+    "n_rows": 6000,
+    "n_columns": 38,
+    "missingness_pct": {
+      "vitamin_d_nmol_l": 0.126,
+      "albumin_g_l": 0.0942,
+      "egfr_ml_min": 0.0823,
+      "crp_mg_l": 0.073,
+      "depression_screen_score": 0.0603,
+      "mmse_score": 0.0532,
+      "gait_speed_ms": 0.0448,
+      "grip_strength_kg": 0.0358,
+      "education_years": 0.0348
+    },
+    "target_prevalence": 0.1927,
+    "numeric_summary": {
+      "age": {
+        "mean": 74.379,
+        "std": 6.733,
+        "min": 65.0,
+        "p25": 69.0,
+        "median": 74.0,
+        "p75": 79.0,
+        "max": 95.0
+      },
+      "education_years": {
+        "mean": 11.74,
+        "std": 3.173,
+        "min": 6.0,
+        "p25": 9.0,
+        "median": 12.0,
+        "p75": 14.0,
+        "max": 20.0
+      },
+      "lives_alone": {
+        "mean": 0.297,
+        "std": 0.457,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0
+      },
+      "weight_loss_kg_last_year": {
+        "mean": 0.663,
+        "std": 2.07,
+        "min": -3.0,
+        "p25": -0.8,
+        "median": 0.6,
+        "p75": 2.1,
+        "max": 9.7
+      },
+      "exhaustion_score": {
+        "mean": 0.334,
+        "std": 0.237,
+        "min": 0.0,
+        "p25": 0.15,
+        "median": 0.32,
+        "p75": 0.5,
+        "max": 1.0
+      },
+      "grip_strength_kg": {
+        "mean": 23.859,
+        "std": 8.964,
+        "min": 5.0,
+        "p25": 17.1,
+        "median": 23.6,
+        "p75": 30.6,
+        "max": 52.8
+      },
+      "gait_speed_ms": {
+        "mean": 0.943,
+        "std": 0.21,
+        "min": 0.2,
+        "p25": 0.8,
+        "median": 0.94,
+        "p75": 1.09,
+        "max": 1.6
+      },
+      "physical_activity_score": {
+        "mean": 210.067,
+        "std": 63.271,
+        "min": 0.0,
+        "p25": 167.0,
+        "median": 212.0,
+        "p75": 253.0,
+        "max": 400.0
+      },
+      "timed_up_and_go_s": {
+        "mean": 9.77,
+        "std": 2.456,
+        "min": 4.0,
+        "p25": 8.1,
+        "median": 9.7,
+        "p75": 11.4,
+        "max": 18.8
+      },
+      "chair_stand_time_s": {
+        "mean": 12.425,
+        "std": 3.123,
+        "min": 6.0,
+        "p25": 10.2,
+        "median": 12.4,
+        "p75": 14.5,
+        "max": 25.0
+      },
+      "falls_last_year": {
+        "mean": 0.345,
+        "std": 0.661,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 6.0
+      },
+      "mmse_score": {
+        "mean": 27.089,
+        "std": 2.17,
+        "min": 17.0,
+        "p25": 26.0,
+        "median": 27.0,
+        "p75": 29.0,
+        "max": 30.0
+      },
+      "depression_screen_score": {
+        "mean": 3.399,
+        "std": 2.483,
+        "min": 0.0,
+        "p25": 1.0,
+        "median": 3.0,
+        "p75": 5.0,
+        "max": 13.0
+      },
+      "hypertension": {
+        "mean": 0.492,
+        "std": 0.5,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0
+      },
+      "diabetes_t2": {
+        "mean": 0.189,
+        "std": 0.391,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "cvd_history": {
+        "mean": 0.173,
+        "std": 0.378,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "copd": {
+        "mean": 0.118,
+        "std": 0.323,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "osteoporosis": {
+        "mean": 0.159,
+        "std": 0.366,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "chronic_kidney_disease": {
+        "mean": 0.112,
+        "std": 0.316,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "cancer_history": {
+        "mean": 0.113,
+        "std": 0.316,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "arthritis": {
+        "mean": 0.342,
+        "std": 0.474,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0
+      },
+      "hearing_impairment": {
+        "mean": 0.293,
+        "std": 0.455,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0
+      },
+      "vision_impairment": {
+        "mean": 0.194,
+        "std": 0.395,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0
+      },
+      "comorbidity_count": {
+        "mean": 1.697,
+        "std": 1.134,
+        "min": 0.0,
+        "p25": 1.0,
+        "median": 2.0,
+        "p75": 2.0,
+        "max": 6.0
+      },
+      "polypharmacy_n_meds": {
+        "mean": 3.788,
+        "std": 2.346,
+        "min": 0.0,
+        "p25": 2.0,
+        "median": 3.0,
+        "p75": 5.0,
+        "max": 14.0
+      },
+      "hemoglobin_g_dl": {
+        "mean": 13.651,
+        "std": 1.168,
+        "min": 9.9,
+        "p25": 12.9,
+        "median": 13.6,
+        "p75": 14.4,
+        "max": 17.6
+      },
+      "crp_mg_l": {
+        "mean": 2.792,
+        "std": 2.992,
+        "min": 0.1,
+        "p25": 1.0,
+        "median": 1.9,
+        "p75": 3.4,
+        "max": 39.6
+      },
+      "albumin_g_l": {
+        "mean": 41.822,
+        "std": 2.92,
+        "min": 31.7,
+        "p25": 39.8,
+        "median": 41.9,
+        "p75": 43.8,
+        "max": 50.0
+      },
+      "vitamin_d_nmol_l": {
+        "mean": 57.149,
+        "std": 17.156,
+        "min": 10.0,
+        "p25": 46.0,
+        "median": 57.0,
+        "p75": 69.0,
+        "max": 117.0
+      },
+      "egfr_ml_min": {
+        "mean": 77.868,
+        "std": 12.459,
+        "min": 35.0,
+        "p25": 69.0,
+        "median": 78.0,
+        "p75": 86.0,
+        "max": 120.0
+      },
+      "bmi": {
+        "mean": 26.475,
+        "std": 3.401,
+        "min": 15.0,
+        "p25": 24.2,
+        "median": 26.5,
+        "p75": 28.7,
+        "max": 38.0
+      },
+      "frailty_index_baseline": {
+        "mean": 0.172,
+        "std": 0.111,
+        "min": 0.0,
+        "p25": 0.077,
+        "median": 0.154,
+        "p75": 0.231,
+        "max": 0.731
+      },
+      "follow_up_frailty_index": {
+        "mean": 0.194,
+        "std": 0.123,
+        "min": 0.0,
+        "p25": 0.104,
+        "median": 0.172,
+        "p75": 0.258,
+        "max": 0.841
+      }
+    },
+    "fried_status_counts": {
+      "Robust": 3661,
+      "Pre-frail": 1990,
+      "Frail": 349
+    }
+  },
+  "after": {
+    "n_train": 4200,
+    "n_val": 900,
+    "n_test": 900,
+    "n_features_after_encoding": 38,
+    "missingness_pct_after_imputation": {
+      "education_years": 0.0348,
+      "grip_strength_kg": 0.036,
+      "gait_speed_ms": 0.0443,
+      "mmse_score": 0.0533,
+      "depression_screen_score": 0.0605,
+      "crp_mg_l": 0.0676,
+      "albumin_g_l": 0.0957,
+      "vitamin_d_nmol_l": 0.1221,
+      "egfr_ml_min": 0.0807
+    },
+    "numeric_summary_scaled_train": {
+      "age": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -1.393,
+        "p25": -0.801,
+        "median": -0.06,
+        "p75": 0.681,
+        "max": 3.052
+      },
+      "education_years": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -1.816,
+        "p25": -0.602,
+        "median": 0.09,
+        "p75": 0.726,
+        "max": 2.632
+      },
+      "lives_alone": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.651,
+        "p25": -0.651,
+        "median": -0.651,
+        "p75": 1.537,
+        "max": 1.537
+      },
+      "weight_loss_kg_last_year": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -1.748,
+        "p25": -0.743,
+        "median": 0.022,
+        "p75": 0.644,
+        "max": 4.041
+      },
+      "exhaustion_score": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -1.416,
+        "p25": -0.783,
+        "median": -0.066,
+        "p75": 0.694,
+        "max": 2.803
+      },
+      "grip_strength_kg": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -2.094,
+        "p25": -0.739,
+        "median": -0.034,
+        "p75": 0.761,
+        "max": 3.257
+      },
+      "gait_speed_ms": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -3.108,
+        "p25": -0.674,
+        "median": -0.006,
+        "p75": 0.663,
+        "max": 3.145
+      },
+      "physical_activity_score": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -3.293,
+        "p25": -0.679,
+        "median": 0.026,
+        "p75": 0.683,
+        "max": 2.969
+      },
+      "timed_up_and_go_s": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -2.35,
+        "p25": -0.683,
+        "median": -0.033,
+        "p75": 0.659,
+        "max": 3.22
+      },
+      "chair_stand_time_s": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -2.051,
+        "p25": -0.683,
+        "median": -0.015,
+        "p75": 0.653,
+        "max": 3.772
+      },
+      "falls_last_year": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.532,
+        "p25": -0.532,
+        "median": -0.532,
+        "p75": 0.989,
+        "max": 8.595
+      },
+      "mmse_score": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -3.769,
+        "p25": -0.499,
+        "median": -0.032,
+        "p75": 0.902,
+        "max": 1.369
+      },
+      "depression_screen_score": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -1.392,
+        "p25": -0.925,
+        "median": -0.168,
+        "p75": 0.648,
+        "max": 3.912
+      },
+      "hypertension": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.984,
+        "p25": -0.984,
+        "median": -0.984,
+        "p75": 1.016,
+        "max": 1.016
+      },
+      "diabetes_t2": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.485,
+        "p25": -0.485,
+        "median": -0.485,
+        "p75": -0.485,
+        "max": 2.062
+      },
+      "cvd_history": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.47,
+        "p25": -0.47,
+        "median": -0.47,
+        "p75": -0.47,
+        "max": 2.126
+      },
+      "copd": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.364,
+        "p25": -0.364,
+        "median": -0.364,
+        "p75": -0.364,
+        "max": 2.748
+      },
+      "osteoporosis": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.44,
+        "p25": -0.44,
+        "median": -0.44,
+        "p75": -0.44,
+        "max": 2.273
+      },
+      "chronic_kidney_disease": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.355,
+        "p25": -0.355,
+        "median": -0.355,
+        "p75": -0.355,
+        "max": 2.821
+      },
+      "cancer_history": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.352,
+        "p25": -0.352,
+        "median": -0.352,
+        "p75": -0.352,
+        "max": 2.844
+      },
+      "arthritis": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.721,
+        "p25": -0.721,
+        "median": -0.721,
+        "p75": 1.387,
+        "max": 1.387
+      },
+      "hearing_impairment": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.645,
+        "p25": -0.645,
+        "median": -0.645,
+        "p75": 1.551,
+        "max": 1.551
+      },
+      "vision_impairment": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.491,
+        "p25": -0.491,
+        "median": -0.491,
+        "p75": -0.491,
+        "max": 2.038
+      },
+      "comorbidity_count": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -1.493,
+        "p25": -0.618,
+        "median": 0.257,
+        "p75": 0.257,
+        "max": 3.757
+      },
+      "polypharmacy_n_meds": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -1.611,
+        "p25": -0.759,
+        "median": -0.333,
+        "p75": 0.52,
+        "max": 4.356
+      },
+      "hemoglobin_g_dl": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -3.191,
+        "p25": -0.72,
+        "median": -0.038,
+        "p75": 0.729,
+        "max": 3.371
+      },
+      "crp_mg_l": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.917,
+        "p25": -0.576,
+        "median": -0.279,
+        "p75": 0.208,
+        "max": 12.554
+      },
+      "albumin_g_l": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -3.2,
+        "p25": -0.642,
+        "median": 0.024,
+        "p75": 0.654,
+        "max": 2.862
+      },
+      "vitamin_d_nmol_l": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -2.871,
+        "p25": -0.618,
+        "median": -0.009,
+        "p75": 0.618,
+        "max": 3.645
+      },
+      "egfr_ml_min": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -3.513,
+        "p25": -0.636,
+        "median": 0.021,
+        "p75": 0.679,
+        "max": 3.474
+      },
+      "bmi": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -3.312,
+        "p25": -0.656,
+        "median": 0.007,
+        "p75": 0.671,
+        "max": 3.326
+      },
+      "polypharmacy_flag": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.709,
+        "p25": -0.709,
+        "median": -0.709,
+        "p75": 1.41,
+        "max": 1.41
+      },
+      "ckd_stage_flag": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.264,
+        "p25": -0.264,
+        "median": -0.264,
+        "p75": -0.264,
+        "max": 3.785
+      },
+      "multimorbidity_flag": {
+        "mean": 0.0,
+        "std": 1.0,
+        "min": -0.544,
+        "p25": -0.544,
+        "median": -0.544,
+        "p75": -0.544,
+        "max": 1.837
+      },
+      "low_mmse_flag": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.241,
+        "p25": -0.241,
+        "median": -0.241,
+        "p75": -0.241,
+        "max": 4.155
+      },
+      "recurrent_falls_flag": {
+        "mean": -0.0,
+        "std": 1.0,
+        "min": -0.273,
+        "p25": -0.273,
+        "median": -0.273,
+        "p75": -0.273,
+        "max": 3.658
+      }
+    },
+    "target_prevalence_train": 0.1926,
+    "target_prevalence_val": 0.1933,
+    "target_prevalence_test": 0.1922
+  },
+  "feature_target_correlation_train": {
+    "gait_speed_ms": -0.331,
+    "physical_activity_score": -0.316,
+    "timed_up_and_go_s": 0.294,
+    "chair_stand_time_s": 0.276,
+    "age": 0.274,
+    "mmse_score": -0.273,
+    "depression_screen_score": 0.27,
+    "grip_strength_kg": -0.247,
+    "exhaustion_score": 0.236,
+    "egfr_ml_min": -0.229,
+    "falls_last_year": 0.227,
+    "albumin_g_l": -0.211,
+    "low_mmse_flag": 0.209,
+    "comorbidity_count": 0.197,
+    "polypharmacy_n_meds": 0.195,
+    "weight_loss_kg_last_year": 0.192,
+    "crp_mg_l": 0.182,
+    "polypharmacy_flag": 0.17,
+    "recurrent_falls_flag": 0.163,
+    "lives_alone": 0.158,
+    "hemoglobin_g_dl": -0.157,
+    "multimorbidity_flag": 0.155,
+    "ckd_stage_flag": 0.155,
+    "vitamin_d_nmol_l": -0.115,
+    "copd": 0.11,
+    "chronic_kidney_disease": 0.103,
+    "osteoporosis": 0.091,
+    "cvd_history": 0.074,
+    "diabetes_t2": 0.074,
+    "bmi": -0.068,
+    "hypertension": 0.059,
+    "arthritis": 0.055,
+    "vision_impairment": 0.044,
+    "hearing_impairment": 0.039,
+    "education_years": -0.038,
+    "cancer_history": 0.035
+  },
+  "feature_names": [
+    "age",
+    "education_years",
+    "lives_alone",
+    "weight_loss_kg_last_year",
+    "exhaustion_score",
+    "grip_strength_kg",
+    "gait_speed_ms",
+    "physical_activity_score",
+    "timed_up_and_go_s",
+    "chair_stand_time_s",
+    "falls_last_year",
+    "mmse_score",
+    "depression_screen_score",
+    "hypertension",
+    "diabetes_t2",
+    "cvd_history",
+    "copd",
+    "osteoporosis",
+    "chronic_kidney_disease",
+    "cancer_history",
+    "arthritis",
+    "hearing_impairment",
+    "vision_impairment",
+    "comorbidity_count",
+    "polypharmacy_n_meds",
+    "hemoglobin_g_dl",
+    "crp_mg_l",
+    "albumin_g_l",
+    "vitamin_d_nmol_l",
+    "egfr_ml_min",
+    "bmi",
+    "polypharmacy_flag",
+    "ckd_stage_flag",
+    "multimorbidity_flag",
+    "low_mmse_flag",
+    "recurrent_falls_flag",
+    "sex_Female",
+    "sex_Male"
+  ],
+  "categorical_nominal": [
+    "sex"
+  ],
+  "categorical_ordinal": [],
+  "numeric_features": [
+    "age",
+    "education_years",
+    "lives_alone",
+    "weight_loss_kg_last_year",
+    "exhaustion_score",
+    "grip_strength_kg",
+    "gait_speed_ms",
+    "physical_activity_score",
+    "timed_up_and_go_s",
+    "chair_stand_time_s",
+    "falls_last_year",
+    "mmse_score",
+    "depression_screen_score",
+    "hypertension",
+    "diabetes_t2",
+    "cvd_history",
+    "copd",
+    "osteoporosis",
+    "chronic_kidney_disease",
+    "cancer_history",
+    "arthritis",
+    "hearing_impairment",
+    "vision_impairment",
+    "comorbidity_count",
+    "polypharmacy_n_meds",
+    "hemoglobin_g_dl",
+    "crp_mg_l",
+    "albumin_g_l",
+    "vitamin_d_nmol_l",
+    "egfr_ml_min",
+    "bmi",
+    "polypharmacy_flag",
+    "ckd_stage_flag",
+    "multimorbidity_flag",
+    "low_mmse_flag",
+    "recurrent_falls_flag"
+  ],
+  "preprocessing_steps": [
+    "Feature engineering: age bands, BMI category, polypharmacy flag, CKD-stage flag, multimorbidity flag, low-MMSE flag, recurrent-falls flag (age_band / bmi_category kept for display only, see below)",
+    "Excluded post-baseline / leakage column: follow_up_frailty_index",
+    "Excluded from model matrix (display-only): age_band, bmi_category, frailty_index_baseline, fried_frailty_status_baseline, municipality \u2014 each is either a deterministic aggregate of other included features or (municipality) unrelated to outcome; keeping them caused unstable, sign-flipping coefficients without improving test ROC-AUC",
+    "Stratified 70/15/15 train/val/test split (fit transformers on train only)",
+    "One-hot encoding: sex (only remaining nominal categorical)",
+    "KNN imputation (k=7) for missing labs/tests, fit on train only",
+    "Standardization (z-score) of all numeric features, fit on train only"
+  ]
+}

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/*.tsbuildinfo
+
+# OS
+.DS_Store
+
+# Data & model artifacts are intentionally COMMITTED for this demo project
+# (small synthetic CSVs + small sklearn models) so the frontend/backend run
+# immediately after `git clone` without rerunning the pipeline. If these
+# grow large, move them to Git LFS or regenerate on deploy instead.

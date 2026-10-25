@@ -1,0 +1,15 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.8
+python-multipart>=0.0.9
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.4
+joblib>=1.4
+
+# Optional but recommended — the code auto-detects and uses these if
+# installed; it degrades gracefully (permutation importance instead of
+# SHAP, sklearn HistGradientBoosting instead of XGBoost) if you skip them.
+xgboost>=2.0
+shap>=0.45
+matplotlib>=3.8

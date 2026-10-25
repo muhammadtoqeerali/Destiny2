@@ -1,0 +1,188 @@
+{
+  "best_model_name": "LogisticRegression",
+  "permutation_importance_val": [
+    {
+      "feature": "age",
+      "importance_mean": 0.06434,
+      "importance_std": 0.01556
+    },
+    {
+      "feature": "lives_alone",
+      "importance_mean": 0.02904,
+      "importance_std": 0.00879
+    },
+    {
+      "feature": "falls_last_year",
+      "importance_mean": 0.02897,
+      "importance_std": 0.00911
+    },
+    {
+      "feature": "grip_strength_kg",
+      "importance_mean": 0.01886,
+      "importance_std": 0.00849
+    },
+    {
+      "feature": "gait_speed_ms",
+      "importance_mean": 0.0167,
+      "importance_std": 0.00812
+    },
+    {
+      "feature": "chronic_kidney_disease",
+      "importance_mean": 0.00763,
+      "importance_std": 0.00281
+    },
+    {
+      "feature": "hearing_impairment",
+      "importance_mean": 0.00659,
+      "importance_std": 0.00276
+    },
+    {
+      "feature": "comorbidity_count",
+      "importance_mean": 0.00552,
+      "importance_std": 0.00361
+    },
+    {
+      "feature": "physical_activity_score",
+      "importance_mean": 0.0046,
+      "importance_std": 0.00329
+    },
+    {
+      "feature": "education_years",
+      "importance_mean": 0.00415,
+      "importance_std": 0.00304
+    },
+    {
+      "feature": "multimorbidity_flag",
+      "importance_mean": 0.00337,
+      "importance_std": 0.00214
+    },
+    {
+      "feature": "mmse_score",
+      "importance_mean": 0.00315,
+      "importance_std": 0.0019
+    },
+    {
+      "feature": "bmi",
+      "importance_mean": 0.00107,
+      "importance_std": 0.00101
+    },
+    {
+      "feature": "diabetes_t2",
+      "importance_mean": 0.00079,
+      "importance_std": 0.00352
+    },
+    {
+      "feature": "polypharmacy_flag",
+      "importance_mean": 0.00079,
+      "importance_std": 0.00406
+    },
+    {
+      "feature": "recurrent_falls_flag",
+      "importance_mean": 0.00035,
+      "importance_std": 0.00082
+    },
+    {
+      "feature": "egfr_ml_min",
+      "importance_mean": 0.00022,
+      "importance_std": 0.00035
+    },
+    {
+      "feature": "vision_impairment",
+      "importance_mean": 0.0002,
+      "importance_std": 0.00234
+    },
+    {
+      "feature": "osteoporosis",
+      "importance_mean": 2e-05,
+      "importance_std": 0.00437
+    },
+    {
+      "feature": "hemoglobin_g_dl",
+      "importance_mean": -4e-05,
+      "importance_std": 0.00066
+    }
+  ],
+  "logistic_regression_coefficients": [
+    {
+      "feature": "age",
+      "coefficient": 0.3708
+    },
+    {
+      "feature": "lives_alone",
+      "coefficient": 0.2628
+    },
+    {
+      "feature": "grip_strength_kg",
+      "coefficient": -0.2543
+    },
+    {
+      "feature": "falls_last_year",
+      "coefficient": 0.2343
+    },
+    {
+      "feature": "gait_speed_ms",
+      "coefficient": -0.2196
+    },
+    {
+      "feature": "comorbidity_count",
+      "coefficient": 0.1815
+    },
+    {
+      "feature": "crp_mg_l",
+      "coefficient": 0.1681
+    },
+    {
+      "feature": "copd",
+      "coefficient": 0.1282
+    },
+    {
+      "feature": "osteoporosis",
+      "coefficient": 0.1235
+    },
+    {
+      "feature": "low_mmse_flag",
+      "coefficient": 0.1213
+    },
+    {
+      "feature": "physical_activity_score",
+      "coefficient": -0.0987
+    },
+    {
+      "feature": "hearing_impairment",
+      "coefficient": 0.0962
+    },
+    {
+      "feature": "polypharmacy_flag",
+      "coefficient": 0.0959
+    },
+    {
+      "feature": "chronic_kidney_disease",
+      "coefficient": 0.0958
+    },
+    {
+      "feature": "diabetes_t2",
+      "coefficient": 0.0945
+    },
+    {
+      "feature": "education_years",
+      "coefficient": 0.0935
+    },
+    {
+      "feature": "albumin_g_l",
+      "coefficient": -0.0845
+    },
+    {
+      "feature": "multimorbidity_flag",
+      "coefficient": -0.0794
+    },
+    {
+      "feature": "vision_impairment",
+      "coefficient": 0.0745
+    },
+    {
+      "feature": "hypertension",
+      "coefficient": 0.0657
+    }
+  ],
+  "shap_global_importance_val": null
+}
